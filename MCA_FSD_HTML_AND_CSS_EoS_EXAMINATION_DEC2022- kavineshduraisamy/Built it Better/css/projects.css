@@ -1,0 +1,124 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ overflow-x: hidden;
+}
+
+header{
+ color: black;
+ background-image:linear-gradient(to right,#142b47,#000,#142b47);
+ animation: header 1s ease-in-out;
+
+ }
+ .topnav {
+  overflow: hidden;
+  position: relative;
+ 
+ }
+ .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: x-large;
+ 
+ }
+ 
+ .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+ }
+ 
+ .topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+ }
+ 
+ .topnav .icon {
+  display: none;
+ }
+ 
+ @media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+ }
+ 
+ @media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+ }
+ @keyframes header{
+ 0%{
+  transform: translateY(-100%);
+ }
+ }
+ /* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+ /* sidebar */
+.sidebar {
+ margin: 0;
+ padding: 0;
+ float: right;
+ /* background-color: #f1f1f1; */
+}
+
+.sidebar a {
+ display: block;
+ color: black;
+ padding: 16px;
+ text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+ .sidebar {
+   width: 100%;
+   height: auto;
+   position: fixed;
+ }
+ /* .sidebar a {float: left;} */
+}
+
+@media screen and (max-width: 400px) {
+ .sidebar a {
+   text-align: left;
+   float: none;
+ }
+ .layout{
+  animation: layout 1s ease-in-out;
+ }
+}
